@@ -1,7 +1,8 @@
-import TodoStateOnlyApp from './components/TodoStateOnlyApp';
+import React from 'react';
+import TodoCachedApp from './components/TodoCachedApp';
 import { getTodos } from '@/lib/todo';
 
-export default async function TodoPage() {
+export default async function CachedTodoPage() {
   const initialTodos = await getTodos();
 
   return (
@@ -14,8 +15,7 @@ export default async function TodoPage() {
             </h1>
           </header>
 
-          {/* Halaman Beranda: Menggunakan State Murni (In-Memory) */}
-          <TodoStateOnlyApp initialTodos={initialTodos} />
+          <TodoCachedApp initialTodos={initialTodos} />
         </div>
       </div>
     </main>

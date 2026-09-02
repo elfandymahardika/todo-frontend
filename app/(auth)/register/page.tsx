@@ -28,4 +28,4 @@ export default function RegisterPage() {
       </div>
     </main>
   );
-}
+} 
